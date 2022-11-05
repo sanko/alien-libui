@@ -1,0 +1,30 @@
+use alienfile;
+use Config;
+probe sub {'share'};    # Always build because we're using a fork of libui
+my $darwin = $Config{osname} eq 'darwin';
+share {
+    requires 'Alien::git';
+    requires 'Alien::Meson';
+    requires 'Alien::Ninja';
+    download [ [ '%{git}', 'clone', 'https://github.com/libui-ng/libui-ng.git' ] ];
+    plugin 'Extract::Directory';
+    build [
+        [   '%{meson}',            'setup',
+            'build',               '--prefix=%{.install.prefix}',
+            '-Dtests=false',       '-Dexamples=false',
+            '--buildtype=release', '--default-library=shared',
+            '--backend=ninja'
+        ],
+        [ '%{ninja}', '-C', 'build', '--verbose' ],
+        [ '%{ninja}', '-C', 'build', 'install', '--verbose' ]
+    ];
+    gather [
+        #[ 'echo "1.4.1"', \'%{.runtime.version}' ],
+        [   'echo "-L%{.install.prefix}/lib"',
+            \'%{.runtime.libs}' . ( $darwin ? ' --stdlib=libc++' : '' ),
+        ],
+        [ 'echo "-I%{.install.prefix}/include"', \'%{.runtime.cflags}' ],
+    ];
+
+    #plugin 'Gather::IsolateDynamic';
+};
