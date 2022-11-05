@@ -24,7 +24,7 @@ the native GUI technologies of each platform it supports.
 
 =head1 Runtime Requirements
 
-The library is built with C<meson> and C<ninja> both of which are in turn
+The library is built with C<meson> and C<ninja> both of which may, in turn, be
 provided by Aliens.
 
 In addition to those, platform requirements include:
@@ -33,7 +33,7 @@ In addition to those, platform requirements include:
 
 =item Windows - Windows Vista SP2 with Platform Update or newer
 
-=item *nix - GTK+ 3.10 or newer
+=item *nix - GTK+ 3.10 or newer (you must install this according to your platform)
 
 =item OS X - OS X 10.8 or newer
 

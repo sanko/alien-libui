@@ -32,7 +32,6 @@
             "Alien::Build::MB" : "0",
             "Alien::Meson" : "0",
             "Alien::Ninja" : "0",
-            "Alien::git" : "0",
             "Module::Build" : "0.4005"
          }
       },

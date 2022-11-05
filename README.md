@@ -14,13 +14,13 @@ the native GUI technologies of each platform it supports.
 
 # Runtime Requirements
 
-The library is built with `meson` and `ninja` both of which are in turn
+The library is built with `meson` and `ninja` both of which may, in turn, be
 provided by Aliens.
 
 In addition to those, platform requirements include:
 
 - Windows - Windows Vista SP2 with Platform Update or newer
-- \*nix - GTK+ 3.10 or newer
+- \*nix - GTK+ 3.10 or newer (you must install this according to your platform)
 - OS X - OS X 10.8 or newer
 
 # LICENSE
