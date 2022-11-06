@@ -17,15 +17,18 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install meson ninja
-      - name: Install gtk+-3.0
-        if: ${{ startsWith( matrix.runner, 'ubuntu-' )  }}
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y libgtk-3-dev xvfb gtk+3.0
+      - uses: seanmiddleditch/gha-setup-ninja@master
+      - name: Install gtk+-3.0 (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y libgtk-3-dev
+      - name: Install gtk+-3.0 (OSX)
+        if: matrix.os == 'macos-latest'
+        run: brew install gtk+3
       - name: Setup Perl environment
         uses: shogo82148/actions-setup-perl@v1.12.3
         with:
           perl-version: ${{ matrix.perl }}
           distribution: ${{ matrix.dist }}
       - run: perl -V
+      - run: cpanm -n -v https://github.com/sanko/Dyn.pm/archive/refs/heads/aggr.zip
       - run: cpanm -v Alien::libui
