@@ -2,6 +2,8 @@ Revision history for Perl extension Alien-libui
 
 {{$NEXT}}
 
+    - Roll back version requirement on Alien::Ninja (https://github.com/PerlAlien/Alien-Ninja/issues/9)
+
 0.02 2025-10-29T16:38:06Z
 
     - Set required versions for Alien::Ninja and Alien::Meson

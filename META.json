@@ -4,13 +4,15 @@
    "author" : [
       "Sanko Robinson <sanko@cpan.org>"
    ],
+   "description" : " ",
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.1.28, CPAN::Meta::Converter version 2.150010",
+   "generated_by" : "App::mii v1.0.0",
+   "keywords" : [],
    "license" : [
       "artistic_2"
    ],
    "meta-spec" : {
-      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "url" : "https://metacpan.org/pod/CPAN::Meta::Spec",
       "version" : 2
    },
    "name" : "Alien-libui",
@@ -31,7 +33,7 @@
          "requires" : {
             "Alien::Build::MB" : "0.09",
             "Alien::Meson" : "0.06",
-            "Alien::Ninja" : "0.03",
+            "Alien::Ninja" : "0",
             "Module::Build" : "0.4005"
          }
       },
@@ -55,12 +57,21 @@
          }
       }
    },
-   "release_status" : "unstable",
+   "provides" : {
+      "Alien::libui" : {
+         "file" : "lib/Alien/libui.pm",
+         "version" : "0.02"
+      }
+   },
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/sanko/alien-libui/issues"
       },
       "homepage" : "https://github.com/sanko/alien-libui",
+      "license" : [
+         "http://www.perlfoundation.org/artistic_license_2_0"
+      ],
       "repository" : {
          "type" : "git",
          "url" : "https://github.com/sanko/alien-libui.git",
