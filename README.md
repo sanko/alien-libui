@@ -10,13 +10,12 @@ use Alien::libui;
 
 # DESCRIPTION
 
-libui is a simple and portable (but not inflexible) GUI library in C that uses
-the native GUI technologies of each platform it supports.
+libui is a simple and portable (but not inflexible) GUI library in C that uses the native GUI technologies of each
+platform it supports.
 
 # Runtime Requirements
 
-The library is built with `meson` and `ninja` both of which may, in turn, be
-provided by Aliens.
+The library is built with `meson` and `ninja` both of which may, in turn, be provided by Aliens.
 
 In addition to those, platform requirements include:
 
@@ -28,10 +27,9 @@ In addition to those, platform requirements include:
 
 Copyright (C) Sanko Robinson.
 
-This library is free software; you can redistribute it and/or modify it under
-the terms found in the Artistic License 2. Other copyrights, terms, and
-conditions may apply to data transmitted through this module.
+This library is free software; you can redistribute it and/or modify it under the terms found in the Artistic License
+2\. Other copyrights, terms, and conditions may apply to data transmitted through this module.
 
 # AUTHOR
 
-Sanko Robinson <sanko@cpan.org>
+Sanko Robinson [https://github.com/sanko](https://github.com/sanko)
