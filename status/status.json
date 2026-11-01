@@ -7,9 +7,9 @@
 ,
 "macOS:Intel": "success"
 ,
-"macOS:Apple Silicon": "success"
+"macOS:Apple Silicon": "failure"
 ,
-"Windows:Intel": "success"
+"Windows:Intel": "failure"
 ,
 "Windows:ARM": "success"
 ,
